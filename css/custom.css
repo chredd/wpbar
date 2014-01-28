@@ -1,0 +1,33 @@
+.imgbg h2, .imgbg p, .imgbg h3{
+	background: #000;
+	padding: 5px 10px;
+	float: right;
+	font-family: 'Courier New';
+	text-align: right;
+	clear: both;
+
+	text-transform: uppercase;
+}
+
+.imgbg p{ font-size: 40px; }
+.imgbg h2{ font-size: 60px; }
+.imgbg h3{ font-size: 50px; }
+
+.backgrounds .slide-background div{
+	background-position: center;
+}
+
+.reveal section img{
+	border: none;
+	background: none;
+	box-shadow: none;
+}
+
+.overlay{
+	position: absolute;
+	right: 16px;
+	top: 16px;
+	max-width: 200px;
+	opacity: 0.5;
+	z-index: 1000;
+}
