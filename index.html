@@ -35,6 +35,7 @@
 
 		<div class="reveal">
 
+			<!-- Aftonbladet overlay -->
 			<div class="overlay">
 				<img src="http://gfx.aftonbladet-cdn.se/image/15415922/499/normal/8b55cea916eda/aftonbladet.gif"  alt="">
 			</div>
@@ -72,10 +73,19 @@
 
 					<section>
 						<h2>Bloggar</h2>
+
+						<aside class="notes">
+							Cirka 100 aktiva <br>
+							Nätverksinstallation
+						</aside>
 					</section>
 
 					<section>
 						<h2>Sajter</h2>
+						<aside class="notes">
+							Hemma <br>
+							Granskningar - Hierta mfl
+						</aside>
 					</section>
 
  					<section>
@@ -84,6 +94,14 @@
 
 					<section>
 						<h2>Hur stor trafik?</h2>
+
+						<aside class="notes">
+							<ul>
+								<li>En vanlig dag</li>
+								<li>Jämfört med andra sajter</li>
+								<li></li>
+							</ul>
+						</aside>
 					</section>
 
 				</section>
@@ -91,35 +109,125 @@
 				
 				<section>
 					<h2>Vad är problemet</h2>
-				</section>
 
-				<section>
-					<h2>Vad är Vagrant</h2>
-					Quote here
-					http://www.slideshare.net/coenjacobs/powering-development-and-testing-environments-with-vagrant
 					<aside class="notes">
-						Snabb backgrund 
-						Många vet redan
+						<ul>
+							<li>Sätta upp miljöer / konsulter</li>
+							<li>Miljöer kommer ur synk</li>
+							<li>Diffar mot stage/prod</li>
+							<li>Krångligt för icke ops att sätta upp</li>
+							<li>Förändringar svåra att få ut i alla mljöer</li>
+							<li>TIDSTJUV</li>
+						</ul>
 					</aside>
+				</section>
+
+				<section>
+
+					<section>
+						<h2>Vad är Vagrant</h2>
+						<blockquote>
+							Development <br>
+							environments <br>
+							made easy.
+						</blockquote>
+						<a target="_blank" href="http://www.slideshare.net/coenjacobs/powering-development-and-testing-environments-with-vagrant">Bra presentation från WordCamp Norway 2014</a>
+						
+						<aside class="notes">
+							Snabb backgrund <br>
+							Många vet redan
+						</aside>
+					</section>
+
+					<section>
+						<h2>Virtuell miljö</h2>
+						<h2>Isolerad</h2>
+						<h2>Setupscript</h2>
+					</section>
+
+					<section>
+						<h1>vagrant up</h1>
+						<h2 class="fragment">!</h2>
+					</section>
 
 				</section>
 
 				<section>
-					<h2>Hur fungerar det för oss</h2>
 					
+					<section>
+						<h2>Hur fungerar det för oss?</h2>
+					
+						<aside class="notes">
+							En vagrantfile per projekt <br>
+							Specad för just det projektet
+						</aside>
+					</section>
+
+					<section>
+						<h2>Nya projekt</h2>
+					</section>
+
+					<section>
+						<h2>Nya medarbetare</h2>
+					</section>
+
+					<section>
+						<h2>Synkade miljöer</h2>
+
+						<aside class="notes">
+							<ul>
+								<li>Samma debian-rel, samma settings</li>
+								<li>Synk av livedata - scripts</li>
+								<li>Puppet nästa steg</li>
+							</ul>
+						</aside>
+					</section>
+
+					<section>
+						<h2>Tools</h2>
+
+						<aside class="notes">
+							<ul>
+								<li>Ruby - Driftsättning - Vlad</li>
+								<li>Composer - plugins</li>
+								<li>Nodejs - funktionella tester med casper js</li>
+							</ul>
+						</aside>
+					</section>
+
+					<section>
+						<h2>Labbande</h2>
+
+						<aside class="notes">
+							<ul>
+								<li>Ex: Apache - > Nginx</li>
+								<li>MySQL -> Percona</li>
+								<li>vagrant destroy - up</li>
+							</ul>
+						</aside>
+					</section>
+
+				</section>
+
+
+				<section>
+					<h2>Vad är nästa steg?</h2>
+					<h3 class="fragment"><a href="http://www.docker.io/" target="_blank">Docker.io</a></h3>
+
 					<aside class="notes">
-						En vagrantfile per projekt
-						Specad för just det projektet
+						<ul>
+							<li>Moduler - dev och prod</li>
+							<li>Fortfarande i Vagrant</li>
+							<li>Vågar man? Spotify</li>
+						</ul>
 					</aside>
-
 				</section>
 
 				<section>
-					<h2>Konkreta exempel</h2>
-				</section>
-
-				<section>
-					<h2>Nästa steg</h2>
+					<h2>Prata Vagrant med mig!</h2>
+					<p>Twitter: @chredd</p>
+					<p>christoffer.larsson@aftonbladet.se</p>
+					<p>Ring! 070-162 91 84</p>
 				</section>
 
 			</div>
@@ -145,11 +253,11 @@
 				transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
 
 				// Parallax scrolling
-				parallaxBackgroundImage: 'http://whatishomeimprovement.com/wp-content/uploads/2012/12/black-wood-background.jpg',
-				parallaxBackgroundSize: '1920px 1200px',				
+				// parallaxBackgroundImage: 'http://whatishomeimprovement.com/wp-content/uploads/2012/12/black-wood-background.jpg',
+				// parallaxBackgroundSize: '1920px 1200px',				
 
-				parallaxBackgroundImage: 'http://fc04.deviantart.net/fs70/f/2012/178/6/4/a_dark_starry_night_wallpaper_by_s3vendays-d151qon.jpg',
-				parallaxBackgroundSize: '2500px 2000px',
+				// parallaxBackgroundImage: 'http://fc04.deviantart.net/fs70/f/2012/178/6/4/a_dark_starry_night_wallpaper_by_s3vendays-d151qon.jpg',
+				// parallaxBackgroundSize: '2500px 2000px',
 
 				
 
