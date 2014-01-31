@@ -6,8 +6,7 @@
 
 		<title>Aftonbladet <3 Vagrant</title>
 
-		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-		<meta name="author" content="Hakim El Hattab">
+		<meta name="description" content="Aftonbladet loves Vagrant!">
 
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -44,8 +43,8 @@
 			<div class="slides">
 				
 				<section>
-					<h1>Aftonbladet <3 Vagrant</h1>
-					<h3>Best thing since sliced bread.</h3>
+					<img src="img/intro.png"  alt="">
+					<h3>Best thing since sliced bread</h3>
 				</section>
 				
 				<section>
@@ -64,24 +63,25 @@
 				<section>
 					
 					<section>
-						<h2>Aftonbladet och WordPress</h2>
+						<img src="img/wpab-small.png" height="262" width="485" alt="">
 
 						<aside class="notes">
+							Börja i rätt ände <br>
 							Okänt att vi gör <br>
 							Exempel på sajter
 						</aside>
 					</section>
 
-					<section>
+					<section class="imgbg" data-background="img/bg/bloggar.png" data-background-transition="slide">
 						<h2>Bloggar</h2>
 
 						<aside class="notes">
 							Cirka 100 aktiva <br>
-							Nätverksinstallation
+							Nätverksinstallation 
 						</aside>
 					</section>
 
-					<section>
+					<section class="imgbg" data-background="img/bg/kriserna.png" data-background-transition="slide">
 						<h2>Sajter</h2>
 						<aside class="notes">
 							Hemma <br>
@@ -89,12 +89,19 @@
 						</aside>
 					</section>
 
- 					<section>
+					<section class="imgbg" data-background="img/bg/kampanj.png" data-background-transition="slide">
+						<h2>Advertorials</h2>
+						<aside class="notes">
+							Kod av oss - sajter av tredjepart
+						</aside>
+					</section>
+
+ 					<section class="imgbg" data-background="img/bg/politism-2.png" data-background-transition="slide">
 						<h2>Politism</h2>
 					</section>
 
-					<section>
-						<h2>Hur stor trafik?</h2>
+					<section data-background="#fff" data-background-transition="slide">
+						<img src="img/traffic.png"  alt="">
 
 						<aside class="notes">
 							<ul>
@@ -109,46 +116,74 @@
 
 				
 				<section>
-					<h2>Vad är problemet</h2>
+					<h2>Vad är problemet?</h2>
 
 					<aside class="notes">
 						<ul>
 							<li>Sätta upp miljöer / konsulter</li>
 							<li>Miljöer kommer ur synk</li>
 							<li>Diffar mot stage/prod</li>
-							<li>Krångligt för icke ops att sätta upp</li>
+							<li>Krångligt för icke-ops att sätta upp</li>
 							<li>Förändringar svåra att få ut i alla mljöer</li>
-							<li>TIDSTJUV</li>
+							<li>TIDSTJUV!</li>
 						</ul>
 					</aside>
 				</section>
 
 				<section>
 
+					<section data-background="#fff" data-background-transition="slide">
+						<img src="img/vagrant-logo.png"  alt="">
+					</section>
+
 					<section>
-						<h2>Vad är Vagrant</h2>
-						<blockquote>
-							Development <br>
-							environments <br>
-							made easy.
-						</blockquote>
-						<a target="_blank" href="http://www.slideshare.net/coenjacobs/powering-development-and-testing-environments-with-vagrant">Bra presentation från WordCamp Norway 2014</a>
-						
+						<h2>Vad är Vagrant?</h2>
+						<h3 class="fragment">Lösningen på alla problem!</h3>
+						<div class="fragment">
+							<blockquote>
+								Development <br>
+								environments <br>
+								made easy.
+								</blockquote>
+							<a target="_blank" href="http://www.slideshare.net/coenjacobs/powering-development-and-testing-environments-with-vagrant">&#10144;Bra presentation från WordCamp Norway 2014</a>
+						</div>						
+					</section>
+
+					<section>
+						<h2 class="fragment">Virtuell miljö</h2>
+						<h2 class="fragment">Isolerad</h2>
+						<h2 class="fragment">Setupscript</h2>
+
 						<aside class="notes">
-							Snabb backgrund <br>
-							Många vet redan
+							<ul>
+								<li>1. Läser en config (vagrantfile)</li>
+								<li>1. Skapar virtuell miljö / virtualbox, VMware</li>
+								<li>2. Baserad på en template (box) - tex Ubuntu</li>
+								<li>3. Provisioning - Puppet/Chef fler alt</li>
+								<li>3. Hela setupen checkas in i projektet</li>
+							</ul>
 						</aside>
+
 					</section>
 
 					<section>
-						<h2>Virtuell miljö</h2>
-						<h2>Isolerad</h2>
-						<h2>Setupscript</h2>
-					</section>
+						<h2>vagrant <span class="fragment">up</span><span class="fragment">!</span></h2>
 
-					<section>
-						<h1>vagrant up</h1>
-						<h2 class="fragment">!</h2>
+<pre class="fragment">
+<code data-trim>
+$ git clone https://github.com/myawesomeproject 
+$ cd myawesomeproject
+$ vagrant up
+</code>
+</pre>
+
+						<aside class="notes">
+							<ul>
+								<li>Installera virtualbox / VMware</li>
+								<li>Installera vagrant</li>
+								<li>Go!</li>
+							</ul>
+						</aside>
 					</section>
 
 				</section>
@@ -160,16 +195,50 @@
 					
 						<aside class="notes">
 							En vagrantfile per projekt <br>
-							Specad för just det projektet
+							Specad för just det projektet <br>
+							Återanvänder samma box + stor del av provision
+						</aside>
+					</section>
+
+					<section class="imgbg" data-background="img/bg/vvv-github.png" data-background-transition="slide">
+						<h3>Varying Vagrant Vagrants</h3>
+						<p><a href="https://github.com/Varying-Vagrant-Vagrants/VVV" target="_blank">&#10144;Mer info @github</a></p>
+
+						<aside class="notes">
+							<ul>
+								<li>10up - utmärkt exempel</li>
+								<li>Boilerplate</li>
+								<li>Privat labbstuga</li>
+							</ul>
 						</aside>
 					</section>
 
 					<section>
 						<h2>Nya projekt</h2>
+
+						<aside class="notes">
+							<ul>
+								<li>Ny vagrantfile per projekt</li>
+								<li>Maint. av teamet</li>
+								<li></li>
+							</ul>
+						</aside>
 					</section>
 
 					<section>
 						<h2>Nya medarbetare</h2>
+
+						<aside class="notes">
+
+							<ul>
+								<li>Kommer igång snabbt</li>
+								<li>Installera vagrant, virtualbox, git, clone -> vagrant up</li>
+								<li>Exempel Wille Anders ErikF Daniel (AD)</li>
+								<li></li>
+							</ul>					
+
+						</aside>
+
 					</section>
 
 					<section>
@@ -185,13 +254,25 @@
 					</section>
 
 					<section>
-						<h2>Tools</h2>
+						<h2>Vår setup</h2>
+
+						<ul>
+							<li>LAMP</li>
+							<li>Composer</li>
+							<li>Ruby / Vlad</li>
+							<li>Nodejs</li>
+							<li>Memcached / Redis</li>
+							<li>Varnish</li>
+							<li>APC</li>
+							<li class="fragment">..och mycket mer!</li>
+						</ul>
 
 						<aside class="notes">
 							<ul>
-								<li>Ruby - Driftsättning - Vlad</li>
-								<li>Composer - plugins</li>
+								<li>Ruby - Driftsättning - Vlad - SESSION</li>
+								<li>Composer - plugins - SESSION</li>
 								<li>Nodejs - funktionella tester med casper js</li>
+								<li>Nodejs - GRUNT</li>
 							</ul>
 						</aside>
 					</section>
@@ -212,16 +293,31 @@
 
 
 				<section>
-					<h2>Vad är nästa steg?</h2>
-					<h3 class="fragment"><a href="http://www.docker.io/" target="_blank">Docker.io</a></h3>
+					<section>
+						<h2>Nästa steg?</h2>
+						<aside class="notes">
+							Bättre provision
+						</aside>
+					</section>
+					<section class="imgbg" data-background="img/bg/docker-web.png" data-background-transition="slide">
+						<h3><a href="http://www.docker.io/" target="_blank">&#10144;Docker.io</a></h3>
 
-					<aside class="notes">
-						<ul>
-							<li>Moduler - dev och prod</li>
-							<li>Fortfarande i Vagrant</li>
-							<li>Vågar man? Spotify</li>
-						</ul>
-					</aside>
+						<aside class="notes">
+							<ul>
+								<li>Moduler - dev och prod</li>
+								<li>Fortfarande i Vagrant</li>
+								<li>Vågar man? Spotify</li>
+							</ul>
+						</aside>
+					</section>
+				</section>
+
+
+				<section>
+					<h2>Hur kommer jag igång?</h2>
+					<a href="http://jeremyfelt.com/code/2013/04/08/hi-wordpress-meet-vagrant/" target="_blank">&#10144;Hi WordPress - meet Vagrant</a> <br>
+					<a href="https://github.com/Varying-Vagrant-Vagrants/VVV" target="_blank">&#10144;Varying Vagrant Vagrants</a> <br>
+					<a href="http://docs.vagrantup.com/v2/" target="_blank">&#10144;Vagrantdocs</a>
 				</section>
 
 				<section>
@@ -229,7 +325,6 @@
 					<h3>Vi delar gärna med oss.</h3>
 					<p>Twitter: @chredd</p>
 					<p>christoffer.larsson@aftonbladet.se</p>
-					<p>Ring! 070-162 91 84</p>
 				</section>
 
 			</div>
