@@ -36,7 +36,7 @@
 
 			<!-- Aftonbladet overlay -->
 			<div class="overlay">
-				<img src="http://gfx.aftonbladet-cdn.se/image/15415922/499/normal/8b55cea916eda/aftonbladet.gif"  alt="">
+				<img src="img/aftonbladet.gif"  alt="">
 			</div>
 
 			<!-- Any section element inside of this container is displayed as a slide -->
@@ -54,8 +54,8 @@
 
 					<aside class="notes">
 						Chris Larsson <br>
-						Webbutvecklare <br>
 						Webb sedan -96 <br>
+						lead dev wordpress @aftonbladet <br>
 					</aside>
 
 				</section>
@@ -67,8 +67,8 @@
 
 						<aside class="notes">
 							Börja i rätt ände <br>
-							Okänt att vi gör <br>
-							Exempel på sajter
+							Okänt att vi gör med på wp<br>
+							Exempel på sajter/installationer
 						</aside>
 					</section>
 
@@ -76,8 +76,8 @@
 						<h2>Bloggar</h2>
 
 						<aside class="notes">
-							Cirka 100 aktiva <br>
-							Nätverksinstallation 
+							Nätverksinstallation <br>
+							Cirka 100 aktiva - totalt 400 sajter <br>
 						</aside>
 					</section>
 
@@ -85,7 +85,7 @@
 						<h2>Sajter</h2>
 						<aside class="notes">
 							Hemma <br>
-							Granskningar - Hierta mfl
+							Granskningar, Kriserna mfl
 						</aside>
 					</section>
 
@@ -98,6 +98,13 @@
 
  					<section class="imgbg" data-background="img/bg/politism-2.png" data-background-transition="slide">
 						<h2>Politism</h2>
+
+						<aside class="notes">
+							<ul>
+								<li>Samarbete Aftonbladet ledare / LO</li>
+								<li>Trafikrekord - 500k unika</li>
+							</ul>
+						</aside>
 					</section>
 
 					<section data-background="#fff" data-background-transition="slide">
@@ -106,8 +113,8 @@
 						<aside class="notes">
 							<ul>
 								<li>En vanlig dag</li>
-								<li>Jämfört med andra sajter</li>
-								<li></li>
+								<li>Jämfört med andra sajter - mer än tv.nu</li>
+								<li>Mer än hela Mittmedia tillsammans</li>
 							</ul>
 						</aside>
 					</section>
@@ -116,16 +123,25 @@
 
 				
 				<section>
-					<h2>Vad är problemet?</h2>
+					<h2>Ett vanligt problem <span class="fragment">?</span></h2>
+
+						<ul class="fragment">
+							<li>Sätta upp utvecklingsmiljöer</li>
+							<li>Miljöerna kommer ur synk</li>
+							<li>Skiljer sig mot stage/prod</li>
+							<li>Krångligt för icke-ops att sätta upp</li>
+							<li>Förändringar svåra att få ut i alla mljöer</li>
+							<li class="fragment">TIDSTJUV!</li>
+						</ul>
 
 					<aside class="notes">
 						<ul>
 							<li>Sätta upp miljöer / konsulter</li>
-							<li>Miljöer kommer ur synk</li>
+							<li>Miljöer kommer ur synk - "Fungerar på min dator!!"</li>
 							<li>Diffar mot stage/prod</li>
 							<li>Krångligt för icke-ops att sätta upp</li>
 							<li>Förändringar svåra att få ut i alla mljöer</li>
-							<li>TIDSTJUV!</li>
+							<li>TIDSTJUV! - För mycket strul - för lite programmering</li>
 						</ul>
 					</aside>
 				</section>
@@ -146,17 +162,25 @@
 								made easy.
 								</blockquote>
 							<a target="_blank" href="http://www.slideshare.net/coenjacobs/powering-development-and-testing-environments-with-vagrant">&#10144;Bra presentation från WordCamp Norway 2014</a>
-						</div>						
+						</div>
+
+						<aside class="notes">
+							<ul>
+								<li>Lösningen på alla problem (nåväl)</li>
+								<li>Som de säger själva</li>
+								<li></li>
+							</ul>
+						</aside>						
 					</section>
 
 					<section>
-						<h2 class="fragment">Virtuell miljö</h2>
-						<h2 class="fragment">Isolerad</h2>
+						<h2 class="fragment">Virtuell utvecklingsmiljö</h2>
+						<h2 class="fragment">Isolerat operativsystem</h2>
 						<h2 class="fragment">Setupscript</h2>
 
 						<aside class="notes">
 							<ul>
-								<li>1. Läser en config (vagrantfile)</li>
+								<li>1. Läser en config (vagrantfile), Mac/PC</li>
 								<li>1. Skapar virtuell miljö / virtualbox, VMware</li>
 								<li>2. Baserad på en template (box) - tex Ubuntu</li>
 								<li>3. Provisioning - Puppet/Chef fler alt</li>
@@ -258,21 +282,22 @@ $ vagrant up
 
 						<ul>
 							<li>LAMP</li>
+							<li>APC</li>
 							<li>Composer</li>
 							<li>Ruby / Vlad</li>
 							<li>Nodejs</li>
 							<li>Memcached / Redis</li>
 							<li>Varnish</li>
-							<li>APC</li>
 							<li class="fragment">..och mycket mer!</li>
 						</ul>
 
 						<aside class="notes">
 							<ul>
-								<li>Ruby - Driftsättning - Vlad - SESSION</li>
+								<li>LAMP - settings Apache - MySQL - PHP - prod</li>
 								<li>Composer - plugins - SESSION</li>
+								<li>Ruby - Driftsättning - Vlad - SESSION</li>
 								<li>Nodejs - funktionella tester med casper js</li>
-								<li>Nodejs - GRUNT</li>
+								<li>Nodejs - GRUNT automatisera</li>
 							</ul>
 						</aside>
 					</section>
@@ -285,6 +310,7 @@ $ vagrant up
 								<li>Ex: Apache - > Nginx</li>
 								<li>MySQL -> Percona</li>
 								<li>vagrant destroy - up</li>
+								<li>Vad har det resulterat i för oss?</li>
 							</ul>
 						</aside>
 					</section>
